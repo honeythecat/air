@@ -4,7 +4,7 @@ describe 'the add a rental process' do
 
   it "adds a new rental" do
     visit rentals_path
-    click_on "Add Property"
+    click_on "Create Property"
     fill_in 'Location', :with => 'Epicodus'
     fill_in 'Price', :with => '1'
     click_on 'Create Rental'

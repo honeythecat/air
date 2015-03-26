@@ -1,0 +1,9 @@
+<%= render 'layouts/errors', :object => @rental %>
+
+<%= form_for @rental do |f| %>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+  <%= f.submit %>
+<% end %>
