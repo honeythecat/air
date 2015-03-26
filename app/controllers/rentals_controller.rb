@@ -38,6 +38,13 @@ class RentalsController < ApplicationController
     end
   end
 
+  def destroy
+    @rental = Rental.find(params[:id])
+    @rental.destroy
+    flash[:alert] = "Rental destroyed!"
+    redirect_to rentals_path
+  end
+
 private
 def rental_params
   params.require(:rental).permit(:location, :price)
